@@ -11,3 +11,4 @@ jobs:
 
      # deploy the image
      - run: docker push company/app:$CIRCLE_BRANCH
+      
