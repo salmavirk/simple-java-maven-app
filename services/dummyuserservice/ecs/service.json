@@ -1,0 +1,36 @@
+{
+    "cluster": "Amido-Test",
+    "serviceName": "Amido-Java-Service",
+    "taskDefinition": "amido-java",
+    "loadBalancers": [
+        {
+            "targetGroupArn": "arn:aws:elasticloadbalancing:eu-west-1:129348809522:targetgroup/Amido-ALB-TG/9f24c0d5e02430b5",
+            "loadBalancerName": "",
+            "containerName": "amido-java-container",
+            "containerPort": 8080
+        }
+    ],
+    "desiredCount": 2,
+    "launchType": "FARGATE",
+    "deploymentConfiguration": {
+        "maximumPercent": 100,
+        "minimumHealthyPercent": 100
+    },
+    "placementStrategy": [
+        {
+            "type": "random",
+            "field": ""
+        }
+    ],
+    "networkConfiguration": {
+        "awsvpcConfiguration": {
+            "subnets": [
+                "subnet-054897b7add762df7","subnet-001b2442e187cd235"],
+            "securityGroups": [
+                "sg-0c7c189308c296a73"
+            ],
+            "assignPublicIp": "DISABLED"
+        }
+    },
+    "schedulingStrategy": "DAEMON"
+}
