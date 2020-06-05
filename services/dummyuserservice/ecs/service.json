@@ -4,7 +4,7 @@
     "taskDefinition": "amido-java",
     "loadBalancers": [
         {
-            "targetGroupArn": "arn:aws:elasticloadbalancing:eu-west-1:129348809522:targetgroup/Amido-ALB-TG/9f24c0d5e02430b5",
+            "targetGroupArn": "arn:aws:elasticloadbalancing:eu-west-1::targetgroup/Amido-ALB-TG/9f24c0d5e02430b5",
             "loadBalancerName": "",
             "containerName": "amido-java-container",
             "containerPort": 8080
@@ -25,9 +25,9 @@
     "networkConfiguration": {
         "awsvpcConfiguration": {
             "subnets": [
-                "subnet-054897b7add762df7","subnet-001b2442e187cd235"],
+                "subnet-054897b7add762d","subnet-001b2442e187cd2"],
             "securityGroups": [
-                "sg-0c7c189308c296a73"
+                "sg-0c7c189308c2963"
             ],
             "assignPublicIp": "DISABLED"
         }
